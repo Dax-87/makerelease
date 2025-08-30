@@ -144,7 +144,7 @@ def parse(filename: str, title: str, year: str, crew: str) -> str:
 
     final_name = f"{title} ({year}) {tag}"
     
-    # Rimuovi virgolette intorno ai codici lingua (ITA, ENG, etc.)
+    # Remove quotes around language codes (ITA, ENG, etc.)
     import re
     final_name = re.sub(r"'([A-Z]{2,3})'", r'\1', final_name)
     
